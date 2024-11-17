@@ -1,0 +1,222 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header .first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004d99;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .first div {
+    margin: 0 10px;
+}
+
+header .first .logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+header .first .Register button a {
+    text-decoration: none;
+    color: white;
+}
+
+header .first .Register button {
+    background-color: #ff6600;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container > div {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px; 
+      min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.firs {
+    overflow-y: scroll; 
+ max-height: 505px;  
+ gap: 30px; 
+ } 
+ 
+ .forth p{
+   max-height: 300px;
+    overflow-y: auto;
+ }
+ .sixth p{
+    max-height: 100px;
+    overflow-y: auto;
+ }
+ .eight p{
+    max-height: 100px;
+    overflow-y: auto;
+ }
+
+
+/* Specific Sections */
+
+.container h2,
+.container h3 {
+    margin-bottom: 10px;
+    color: #004d99;
+}
+
+.container a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #e65c00;
+}
+
+.container  button {
+    background-color: #004d99;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container button:hover {
+    background-color: #003366;
+}
+
+.container p {
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background: #004d99;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+.menu ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none ;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+.menu {
+    display: flex;
+}
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.5s;
+}
+.menu ul li a:hover {
+    background-color: #c0ae07;
+}
+input{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+     
+    }
+    
+
+    .menu {
+    
+      display: none;
+        flex-direction: column;
+        position: absolute;
+        /* top: 100%; */
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li a {
+        padding: 0.5rem 2rem;
+        text-align: center;
+    }
+
+    /* Toggle Menu Visibility */
+    #menu-toggle:checked ~ .menu{
+        display: flex;
+    }
+}
